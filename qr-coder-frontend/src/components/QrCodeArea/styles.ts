@@ -12,7 +12,5 @@ export const Container = styled.div`
   div {
     margin: 48px;
     padding: 48px;
-    border: 1.83px solid #D1D6D9;
-    border-radius: 16px;
   }
 `

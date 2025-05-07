@@ -6,5 +6,5 @@ export const Container = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: green;
+  background-color: white;
 `
