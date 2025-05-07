@@ -1,22 +1,5 @@
-import "./App.css";
-import QrCodeGenerator from "./components/QrCodeGenerator";
-import logo from "../src/assets/logo.png";
-import logoEscrita from "../src/assets/logo-escrita.png";
+import { Home } from "./pages/Home";
 
-function App() {
-  return (
-    <>
-      <div>
-        <img src={logo} alt="Logo" />
-        |
-        <img src={logoEscrita} alt="Logo escrita" />
-      </div>
-      <div>
-        <h1>Gerar QR Code</h1>
-        <QrCodeGenerator />
-      </div>
-    </>
-  );
+export default function App() {
+  return <Home />;
 }
-
-export default App;
