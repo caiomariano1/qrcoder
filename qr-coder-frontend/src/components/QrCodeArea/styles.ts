@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -13,4 +13,15 @@ export const Container = styled.div`
     margin: 48px;
     padding: 48px;
   }
-`
+
+  @media (max-width: 1250px) {
+    div {
+      margin: 16px;
+      padding: 16px;
+    }
+
+    img {
+      width: 280px !important; 
+    }
+  }
+`;
