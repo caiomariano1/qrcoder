@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Container } from "./styles";
+import { Container, QrCodeDesktop } from "./styles";
 import { FormArea } from "../../components/FormArea";
 import { QrCodeArea } from "../../components/QrCodeArea";
 
 export const Home: React.FC = () => {
+  const [qrCodeUrl, setQrCodeUrl] = useState("");
+
   return (
     <Container>
-      <QrCodeArea />
-      <FormArea />
+      <QrCodeDesktop>
+        <QrCodeArea qrCodeUrl={qrCodeUrl} />
+      </QrCodeDesktop>
+      <FormArea onQrCodeGenerated={setQrCodeUrl} />
     </Container>
   );
 };
