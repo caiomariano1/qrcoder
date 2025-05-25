@@ -61,17 +61,9 @@ export const FormArea: React.FC<Props> = ({ onQrCodeGenerated }) => {
     <Container>
       <FormWrapper>
         <Header>
-          <img
-            src={logo}
-            alt="Logo"
-            style={{ width: "127px", height: "110px", margin: "23px 0" }}
-          />
+          <img className="logo" src={logo} alt="Logo" />
           <LogoDivider />
-          <img
-            src={logoEscrita}
-            alt="Logo Escrita"
-            style={{ width: "288px", height: "82px", objectFit: "contain" }}
-          />
+          <img className="logo-escrita" src={logoEscrita} alt="Logo Escrita" />
         </Header>
 
         <QrCodeMobile>
@@ -79,11 +71,7 @@ export const FormArea: React.FC<Props> = ({ onQrCodeGenerated }) => {
         </QrCodeMobile>
 
         <div>
-          <h3
-            style={{ fontWeight: 700, fontSize: "24px", margin: "48px 0 24px" }}
-          >
-            Gerar Qr Code
-          </h3>
+          <h3>Gerar Qr Code</h3>
 
           {qrcodeGerado ? (
             <SuccessMessage>
@@ -94,10 +82,7 @@ export const FormArea: React.FC<Props> = ({ onQrCodeGenerated }) => {
             <InstructionText>Insira a URL no campo abaixo:</InstructionText>
           )}
 
-          <form
-            onSubmit={handleSubmit}
-            style={{ display: "flex", flexDirection: "column", gap: "60px" }}
-          >
+          <form onSubmit={handleSubmit}>
             <StyledInput
               type="text"
               value={inputUrl}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Container, QrCodeDesktop } from "./styles";
+import { Container, FormWrapperDesktop, QrCodeDesktop } from "./styles";
 import { FormArea } from "../../components/FormArea";
 import { QrCodeArea } from "../../components/QrCodeArea";
 
@@ -12,7 +12,9 @@ export const Home: React.FC = () => {
       <QrCodeDesktop>
         <QrCodeArea qrCodeUrl={qrCodeUrl} />
       </QrCodeDesktop>
-      <FormArea onQrCodeGenerated={setQrCodeUrl} />
+      <FormWrapperDesktop>
+        <FormArea onQrCodeGenerated={setQrCodeUrl} />
+      </FormWrapperDesktop>
     </Container>
   );
 };

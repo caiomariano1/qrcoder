@@ -15,7 +15,7 @@ namespace QrCoderApi.Controllers
             _qrCodeService = qrCodeService;
         }
 
-        [HttpPost("generate")]
+        [HttpPost("post")]
         public IActionResult GenerateQrCode([FromBody] LinkRequest request)
         {
             if (string.IsNullOrWhiteSpace(request.Url))
