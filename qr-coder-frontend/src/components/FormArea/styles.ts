@@ -14,16 +14,47 @@ export const Container = styled.div`
   );
   color: black;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
-  input:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
+  input {
+    border: 1px solid #d1d6d9;
+    height: 30.4px;
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    &:focus,
+    &:active,
+    &:focus-visible {
+      outline: none;
+      border: 1px solid #A9B2B7; 
+    }
+}
+
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 48px 0 24px;
+  }
+
+  form {
+    display: flex; 
+    flex-direction: column;
+    gap: 60px;
   }
 
   @media (max-width: 1250px) {
-    padding: 16px;
     background: transparent;
+    align-items: flex-start;
+    background-color: #F6F8F8;
+
+    h3 {
+      margin: 16px 0 16px;
+    }
+
+    form {
+    gap: 16px;
+  }
   }
 `;
 
@@ -34,10 +65,13 @@ export const FormWrapper = styled.div`
   border-radius: 0 16px 0 16px;
 
   @media (max-width: 1250px) {
-    padding: 24px;
+    margin-top: 16px;
+    padding: 24px 0;
+    margin-inline: 24px;
     width: 100%;
     border-radius: 0;
     border: none;
+    background-color: #F6F8F8;
   }
 `;
 
@@ -47,6 +81,18 @@ export const Header = styled.div`
   gap: 16px;
   border-bottom: 2px solid #D1D6D9;
 
+  .logo {
+    width: 127px;
+    height: 110px;
+    margin: 23px 0;
+  }
+
+  .logo-escrita {
+    width: 288px;
+    height: 82px;
+    object-fit: contain;
+  }
+
   @media (max-width: 1250px) {
     position: fixed;
     top: 0;
@@ -54,8 +100,20 @@ export const Header = styled.div`
     right: 0;
     z-index: 999;
     background-color: white;
-    padding: 16px;
+    border-bottom: 1.9px solid #D1D6D9;
     justify-content: center;
+    height: 60px;
+
+    .logo {
+      width: 51px;
+      height: 44px;
+      margin: 0;
+    }
+
+    .logo-escrita {
+      width: 155px;
+      height: 44px;
+    }
   }
 `;
 
@@ -64,6 +122,10 @@ export const LogoDivider = styled.div`
   height: 82px;
   background-color: #D1D6D9;
   border-radius: 8px;
+
+   @media (max-width: 1250px) {
+    height: 44px;
+   }
 `;
 
 export const SuccessMessage = styled.span`
@@ -97,7 +159,6 @@ export const ButtonGroup = styled.div`
   gap: 16px;
 
   @media (max-width: 1250px) {
-    flex-direction: column;
     gap: 8px;
     align-items: stretch;
   }
@@ -123,8 +184,15 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
 
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    border: 1px solid #d1d6d9; 
+  }
+
   @media (max-width: 1250px) {
-    width: 100%;
+    width: auto;
   }
 `;
 

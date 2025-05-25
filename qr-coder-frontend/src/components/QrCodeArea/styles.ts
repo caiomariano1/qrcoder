@@ -15,13 +15,15 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1250px) {
+    background-color: #F6F8F8;
+
     div {
       margin: 16px;
       padding: 16px;
     }
 
     img {
-      width: 280px !important; 
+      width: 222px !important; 
     }
   }
 `;
