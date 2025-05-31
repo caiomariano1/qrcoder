@@ -19,9 +19,13 @@ import { QrCodeArea } from "../QrCodeArea";
 
 interface Props {
   onQrCodeGenerated: (url: string) => void;
+  onResetQrCode: () => void;
 }
 
-export const FormArea: React.FC<Props> = ({ onQrCodeGenerated }) => {
+export const FormArea: React.FC<Props> = ({
+  onQrCodeGenerated,
+  onResetQrCode,
+}) => {
   const [inputUrl, setInputUrl] = useState("");
   const [qrcodeGerado, setQrcodeGerado] = useState(false);
   const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null);
@@ -45,6 +49,7 @@ export const FormArea: React.FC<Props> = ({ onQrCodeGenerated }) => {
     setInputUrl("");
     setQrCodeUrl(null);
     setQrcodeGerado(false);
+    onResetQrCode();
   };
 
   const handleDownload = () => {
