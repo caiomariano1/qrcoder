@@ -7,9 +7,9 @@ export const Container = styled.div`
   background: linear-gradient(
     -45deg,
     black 0%,
-    rgba(0, 0, 0, 0.5) 15%,
+    rgba(0, 0, 0, 0.65) 15%,
     black 50%,
-    rgba(0, 0, 0, 0.5) 85%,
+    rgba(0, 0, 0, 0.65) 85%,
     black 100%
   );
   color: black;
@@ -150,6 +150,9 @@ export const InstructionText = styled.p`
 export const StyledInput = styled.input`
   padding: 8px;
   font-size: 16px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const ButtonGroup = styled.div`

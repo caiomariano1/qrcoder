@@ -13,7 +13,10 @@ export const Home: React.FC = () => {
         <QrCodeArea qrCodeUrl={qrCodeUrl} />
       </QrCodeDesktop>
       <FormWrapperDesktop>
-        <FormArea onQrCodeGenerated={setQrCodeUrl} />
+        <FormArea
+          onQrCodeGenerated={setQrCodeUrl}
+          onResetQrCode={() => setQrCodeUrl("")}
+        />
       </FormWrapperDesktop>
     </Container>
   );
